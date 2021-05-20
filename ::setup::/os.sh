@@ -71,6 +71,11 @@ sudo mv cd ~/Tools/bin/ && mv * /usr/local/bin
 sudo cd ~/Tools/man/ && mv * /usr/share/man/man1
 sudo cd ~/Tools/completions/ && mv *.fish usr/share/fish/vendor_completions.d
 
+# <- Shell Font ->
+wget "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf" -P ~/.local/share/fonts/
+
+
+
      # :::::::::::::::::::::::::::::: Alias Setup ::::::::::::::::::::::::::::::
 
 
