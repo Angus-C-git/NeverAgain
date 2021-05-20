@@ -37,10 +37,11 @@ sudo apt-get install -y python3-pip
 
 # <- Powerline -> 
 
-pip3 install powerline-shell
 sudo apt-get install -y fonts-powerline
+git clone https://github.com/b-ryan/powerline-shell
+cd powerline-shell && sudo python3 setup.py install
 
-clone
+
 git clone https://github.com/powerline/fonts.git --depth=1
 # install
 cd fonts
@@ -109,6 +110,7 @@ sudo apt-get install -y tmux
 
 # <- cutter ->
 wget https://github.com/rizinorg/cutter/releases/download/v2.0.2/Cutter-v2.0.2-x64.Linux.appimage -P ~/Tools/
+chmod +x ~/Tools/Cutter-v2.0.2-x64.Linux.appimage
 
 # <- pwntools ->
 apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
