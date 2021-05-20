@@ -79,3 +79,73 @@ sudo apt install -y exa  # << Works on some distros
 echo "" >> ~/.config/fish/config.fish
 echo "alias bcat=\"batcat\"" >> ~/.config/fish/config.fish
 
+
+
+     # :::::::::::::::::::::::::::::: Tooling Setup ::::::::::::::::::::::::::::::
+
+echo ""
+echo ""
+echo ":::::::::::::::::::::::::::::: [Tooling Setup] ::::::::::::::::::::::::::::::"
+echo ""
+echo ""
+
+
+mkdir ~/Tools
+
+# <- pwndbg ->
+git clone https://github.com/pwndbg/pwndbg ~/Tools/pwndbg
+cd ~/Tools/pwndbg && chmod +x setup.sh && ./setup.sh
+
+# <- nmap ->
+sudo apt-get install -y nmap
+
+# <- openvpn ->
+sudo apt-get install -y openvpn
+
+# <- tmux ->
+sudo apt-get install -y tmux
+
+# <- cutter ->
+wget https://github.com/rizinorg/cutter/releases/download/v2.0.2/Cutter-v2.0.2-x64.Linux.appimage -P ~/Tools/
+
+# <- pwntools ->
+apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade pwntools
+
+# <- seclists ->
+mkdir ~/Tools/Wordlists/
+wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O ~/Tools/Wordlists/SecList.zip \
+  && unzip ~/Tools/Wordlists/SecList.zip \
+  && rm -f ~/Tools/Wordlists/SecList.zip
+
+# <- golang ->
+sudo apt-get install -y golang
+
+# <- fuff ->
+wget https://github.com/ffuf/ffuf/releases/download/v1.3.1/ffuf_1.3.1_linux_amd64.tar.gz -P ~/Tools/
+unzip -xf ~/Tools/ffuf_1.3.1_linux_amd64.tar.gz
+sudo mv ~/Tools/ffuf /bin/
+rm ~/Tools/ffuf_1.3.1_linux_amd64.tar.gz
+
+
+# <- lazyrecon ->
+git clone https://github.com/nahamsec/lazyrecon.git ~/Tools/lazyrecon/
+chmod +x ~/Tools/lazyrecon/lazyrecon.sh
+
+# <- net-tools ->
+sudo apt-get install -y net-tools
+
+# <- burp-package-version (will need manual update) -> 
+# cd ./packages/ && chmod +x burpsuite_community_linux.sh && ./burpsuite_community_linux.sh
+
+# <- Figma ->
+sudo snap install figma-linux
+
+# <- gitkraken ->
+sudo snap install gitkraken --classic
+
+# <- jetbrains toolbox ->
+wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.20.8352.tar.gz -P ~/Tools/
+
+# ... TODO
