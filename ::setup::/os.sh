@@ -33,6 +33,7 @@ echo ""
 sudo apt-get update
 sudo apt install -y fish
 sudo apt install -y neofetch
+sudo apt-get install -y python3-pip
 
 # <- Powerline -> 
 
@@ -48,6 +49,7 @@ cd fonts
 cd ..
 rm -rf fonts
 
+touch ~/.config/fish/config.fish
 echo "function fish_prompt" >> ~/.config/fish/config.fish
 echo "  powerline-shell --shell bare \$status" >> ~/.config/fish/config.fish
 echo "end" >> ~/.config/fish/config.fish
