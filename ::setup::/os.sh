@@ -64,6 +64,13 @@ echo "neofetch" >> ~/.config/fish/config.fish
 touch ~/.tmux.conf
 echo "set-option -g default-shell /usr/bin/fish" >> ~/.tmux.conf
 
+# <- exa -> 
+wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip -P ~/Tools/
+unzip ~/Tools/exa-linux-x86_64-v0.10.0.zip
+sudo mv cd ~/Tools/bin/ && mv * /usr/local/bin
+sudo cd ~/Tools/man/ && mv * /usr/share/man/man1
+sudo cd ~/Tools/completions/ && mv *.fish usr/share/fish/vendor_completions.d
+
      # :::::::::::::::::::::::::::::: Alias Setup ::::::::::::::::::::::::::::::
 
 
@@ -76,12 +83,8 @@ echo ""
 # <- cat enhancment/plugin -> 
 sudo snap install batcat
 
-# <- ls enhancment/plugin (pain) ->
-sudo apt install -y exa  # << Works on some distros
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
-# unzip exa-linux-x86_64-v0.10.0.zip
-
+# <- ls enhancment/plugin ->
+echo "alias ls=\"exa --icons\"" ~/.config/fish/config.fish
 
 # <- Create alias ->
 echo "" >> ~/.config/fish/config.fish
@@ -157,8 +160,3 @@ wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.20.8352.tar.gz -
 
 # <- hashcat ->
 sudo apt-get install hashcat
-
-# <- hashcat ->
-
-
-# <- hashcat ->
