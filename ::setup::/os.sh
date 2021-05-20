@@ -42,8 +42,7 @@ sudo apt-get install -y tmux
 
 sudo apt-get install -y fonts-powerline
 git clone https://github.com/b-ryan/powerline-shell
-cd powerline-shell && sudo python3 setup.py install
-
+cd powerline-shell && sudo python3 setup.py install && sudo rm -r powerline-shell/ 
 
 git clone https://github.com/powerline/fonts.git --depth=1
 # install
@@ -156,4 +155,10 @@ sudo snap install gitkraken --classic
 # <- jetbrains toolbox ->
 wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.20.8352.tar.gz -P ~/Tools/
 
-# ... TODO
+# <- hashcat ->
+sudo apt-get install hashcat
+
+# <- hashcat ->
+
+
+# <- hashcat ->
