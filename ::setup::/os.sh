@@ -35,6 +35,9 @@ sudo apt install -y fish
 sudo apt install -y neofetch
 sudo apt-get install -y python3-pip
 
+# <- tmux ->
+sudo apt-get install -y tmux
+
 # <- Powerline -> 
 
 sudo apt-get install -y fonts-powerline
@@ -58,6 +61,9 @@ echo "" >> ~/.config/fish/config.fish
 # echo "clear" >> ~/.config << Enable this to hide fish welcome
 echo "neofetch" >> ~/.config/fish/config.fish
 
+# Tmux config
+touch ~/.tmux.conf
+echo "set-option -g default-shell /usr/bin/fish" >> ~/.tmux.conf
 
      # :::::::::::::::::::::::::::::: Alias Setup ::::::::::::::::::::::::::::::
 
@@ -105,8 +111,6 @@ sudo apt-get install -y nmap
 # <- openvpn ->
 sudo apt-get install -y openvpn
 
-# <- tmux ->
-sudo apt-get install -y tmux
 
 # <- cutter ->
 wget https://github.com/rizinorg/cutter/releases/download/v2.0.2/Cutter-v2.0.2-x64.Linux.appimage -P ~/Tools/
