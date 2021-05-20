@@ -73,7 +73,20 @@ sudo cd ~/Tools/completions/ && mv *.fish usr/share/fish/vendor_completions.d
 
 # <- Shell Font ->
 wget "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf" -P ~/.local/share/fonts/
+echo ""
+echo "" 
+echo " [>>] REMEMBER TO SET THE FONT FOR SHELL/SYSTEM MANUALLY"
+echo ""
+echo "" 
 
+# TODO: Setup to edit ~/.local/cd ~/.local/lib/python2.7/site-packages/powerline_shell/__init__.py
+## lego fade powerline bar 
+# 'patched': {
+#      'lock': u'\uE0A2',
+#      'network': u'\uE0A2',
+#      'separator': u'\uE0C6',
+#      'separator_thin': u'\uE0C6'
+# },
 
 
      # :::::::::::::::::::::::::::::: Alias Setup ::::::::::::::::::::::::::::::
