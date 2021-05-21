@@ -67,9 +67,10 @@ echo "set-option -g default-shell /usr/bin/fish" >> ~/.tmux.conf
 # <- exa -> 
 wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip -P ~/Tools/
 unzip ~/Tools/exa-linux-x86_64-v0.10.0.zip
-sudo mv cd ~/Tools/bin/ && mv * /usr/local/bin
-sudo cd ~/Tools/man/ && mv * /usr/share/man/man1
-sudo cd ~/Tools/completions/ && mv *.fish usr/share/fish/vendor_completions.d
+cd  ~/Tools/bin/ && sudo mv * /usr/local/bin
+cd ~/Tools/man/ && sudo mv * /usr/share/man/man1
+cd ~/Tools/completions/ && sudo mv *.fish /usr/share/fish/vendor_completions.d
+cd ~/Tools/ && rm -r bin/ completions/ man/
 
 # <- Shell Font ->
 wget "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf" -P ~/.local/share/fonts/
@@ -102,7 +103,7 @@ echo ""
 sudo snap install batcat
 
 # <- ls enhancment/plugin ->
-echo "alias ls=\"exa --icons\"" ~/.config/fish/config.fish
+echo "alias ls=\"exa --icons\"" >> ~/.config/fish/config.fish
 
 # <- Create alias ->
 echo "" >> ~/.config/fish/config.fish
